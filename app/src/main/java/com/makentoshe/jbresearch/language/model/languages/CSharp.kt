@@ -8,8 +8,6 @@ class CSharp : Language {
     override val title: String
         get() = Languages.csharp
 
-    override val drawableRes: Int
-        get() = TODO("not implemented")
     override val description: Int
         get() = R.string.csharp_description
 }

@@ -8,9 +8,6 @@ class Cpp : Language {
     override val title: String
         get() = Languages.cpp
 
-    override val drawableRes: Int
-        get() = TODO("not implemented")
-
     override val description: Int
         get() = R.string.cpp_description
 }

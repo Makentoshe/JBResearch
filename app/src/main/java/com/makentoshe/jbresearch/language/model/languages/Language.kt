@@ -9,9 +9,6 @@ interface Language {
 
     val title: String
 
-    @get:DrawableRes
-    val drawableRes: Int
-
     @get:StringRes
     val description: Int
 
