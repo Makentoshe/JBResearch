@@ -1,6 +1,7 @@
 package com.makentoshe.jbresearch.language.model.languages
 
 import com.makentoshe.jbresearch.Languages
+import com.makentoshe.jbresearch.R
 
 class Go : Language {
 
@@ -10,5 +11,5 @@ class Go : Language {
     override val drawableRes: Int
         get() = TODO("not implemented")
     override val description: Int
-        get() = TODO("not implemented")
+        get() = R.string.go_description
 }

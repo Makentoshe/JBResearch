@@ -1,6 +1,7 @@
 package com.makentoshe.jbresearch.language.model.languages
 
 import com.makentoshe.jbresearch.Languages
+import com.makentoshe.jbresearch.R
 
 class Kotlin : Language {
 
@@ -9,6 +10,7 @@ class Kotlin : Language {
 
     override val drawableRes: Int
         get() = 0
+
     override val description: Int
-        get() = 0
+        get() = R.string.kotlin_description
 }

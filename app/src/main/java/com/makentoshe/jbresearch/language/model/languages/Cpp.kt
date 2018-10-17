@@ -1,6 +1,7 @@
 package com.makentoshe.jbresearch.language.model.languages
 
 import com.makentoshe.jbresearch.Languages
+import com.makentoshe.jbresearch.R
 
 class Cpp : Language {
 
@@ -9,6 +10,7 @@ class Cpp : Language {
 
     override val drawableRes: Int
         get() = TODO("not implemented")
+
     override val description: Int
-        get() = TODO("not implemented")
+        get() = R.string.cpp_description
 }
