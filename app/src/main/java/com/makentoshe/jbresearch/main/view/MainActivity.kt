@@ -13,7 +13,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        viewModel = ViewModelProviders.of(this)[MainViewModel::class.java]
+        val factory = MainViewModel.Factory()
+        viewModel = ViewModelProviders.of(this, factory)[MainViewModel::class.java]
         super.onCreate(savedInstanceState)
         MainActivityUI(style, viewModel).setContentView(this)
     }

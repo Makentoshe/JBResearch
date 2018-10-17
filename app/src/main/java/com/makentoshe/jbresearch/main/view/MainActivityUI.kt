@@ -14,7 +14,7 @@ class MainActivityUI(private val style: Style, private val viewModel: MainViewMo
     override fun createView(ui: AnkoContext<MainActivity>): View = with(ui) {
         verticalLayout {
             createToolbar(ui.owner)
-            createContent()
+            createContent(ui.owner)
         }
     }
 
@@ -26,9 +26,12 @@ class MainActivityUI(private val style: Style, private val viewModel: MainViewMo
         })
     }
 
-    private fun _LinearLayout.createContent() {
+    private fun _LinearLayout.createContent(owner: AppCompatActivity) {
         listView {
             adapter = viewModel.getContentAdapter(context)
+            setOnItemClickListener { _, _, position, _ ->
+                viewModel.startLanguageActivity(owner, adapter.getItem(position) as String)
+            }
         }.lparams(width = matchParent, height = matchParent)
     }
 }
